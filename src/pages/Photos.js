@@ -5,10 +5,10 @@ import {getClass} from "../utils"
 
 function Photos() {
     const {pics} = useContext(Context);
-    console.log({pics});
+    const images = pics.map(pic => <Image className={getClass(pic.id)} key={pic.id} pic={pic} />)
     return (
         <main className="photos">
-            <h1>Images go here</h1>
+            {images}
         </main>
     )
 }
