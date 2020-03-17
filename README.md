@@ -1,3 +1,5 @@
+*** pics from: https://raw.githubusercontent.com/bobziroll/scrimba-react-bootcamp-images/master/images.json
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
