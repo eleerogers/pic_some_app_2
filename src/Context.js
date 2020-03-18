@@ -29,8 +29,12 @@ function ContextProvider(props) {
     })
   }
 
+  function emptyCart() {
+    setCart([])
+  }
+
   return (
-    <Context.Provider value={{pics, toggleFavorite, addToCart, cart, removeFromCart}}>
+    <Context.Provider value={{pics, toggleFavorite, addToCart, cart, removeFromCart, emptyCart}}>
       {props.children}
     </Context.Provider>
   )
