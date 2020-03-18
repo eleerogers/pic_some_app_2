@@ -50,6 +50,12 @@ div.order-button > button:focus {
   outline: none;
 }
 
+div.order-button > button:hover {
+  outline: none;
+  background-color: darkslategray;
+  color: white;
+}
+
 div.order-button > button:disabled {
   border-color: lightgray;
 }
