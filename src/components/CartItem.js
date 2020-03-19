@@ -3,7 +3,7 @@ import useHover from "../hooks/useHover";
 import {Context} from "../Context";
 
 function CartItem({item}) {
-  const {hover, onEnter, onLeave} = useHover();
+  const [hover, ref] = useHover(null);
   const {removeFromCart} = useContext(Context);
   const classVar = hover ? "fill" : "line"
 
@@ -11,8 +11,7 @@ function CartItem({item}) {
     <div className="cart-item">
       <i
         onClick={() => removeFromCart(item.id)}
-        onMouseEnter={onEnter} 
-        onMouseLeave={onLeave} 
+        ref={ref} 
         className={`ri-delete-bin-${classVar}`}>
       </i>
       <img src={item.url} width="130px" alt="" />
