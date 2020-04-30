@@ -11,7 +11,7 @@ function ContextProvider(props) {
           .then(res => res.json())
           .then(pictures => setPics(pictures))
       }
-  }, [])
+  }, [pics.length])
 
   useEffect(() => {
     localStorage.setItem("pics", JSON.stringify(pics));
